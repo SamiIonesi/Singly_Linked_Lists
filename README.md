@@ -40,13 +40,20 @@ class SinglyLinkedList
             length = 1;
         }
 
-        Node* getHead() { return head; } 
-        Node* getTail() { return tail; }
-
         ~SinglyLinkedList()
         {
-          
+            Node* temp = head;
+
+            while(temp != nullptr)
+            {
+                temp = temp->next;
+                delete head;
+                head = temp;
+            }
         }
+
+        Node* getHead() { return head; } 
+        Node* getTail() { return tail; }
 
 };
 ```
@@ -68,10 +75,26 @@ class SinglyLinkedList
 #### - search(value)
 
 ### 4. Utility methods
-#### getLength()
+#### - getLength()
 ```cpp
 int getLength() { return length; }
 ```
 #### - display()
+```cpp
+void display()
+{
+    Node* temp = head;
+
+    cout << "---------Nodes-value------------" << endl;
+
+    while(temp != nullptr)
+    {
+        cout << temp->value << endl;
+        temp = temp->next;
+    }
+
+    cout << "--------------------------------" << endl;
+}
+```
 #### - reverse()
 #### - isEmpty()
