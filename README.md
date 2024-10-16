@@ -32,6 +32,7 @@ class SinglyLinkedList
         int length;
 
     public:
+        SinglyLinkedList(){};
         SinglyLinkedList(int value)
         {
             Node* newNode = new Node(value);
@@ -94,6 +95,25 @@ void display()
     }
 
     cout << "--------------------------------" << endl;
+}
+```
+
+### - create(array, sizeOfArray)
+```cpp
+void create(int* array, int arraySize)
+{
+    Node* temp = new Node(array[0]);
+
+    head = temp;
+    tail = head;
+
+    for(int i = 1; i < arraySize; i++)
+    {
+        Node* current = new Node(array[i]);
+        tail->next = current;
+        tail = current;
+    }
+    
 }
 ```
 #### - reverse()
