@@ -66,9 +66,9 @@ class SinglyLinkedList
    - search(value)
 4. Utility methods
    - getLength()
-  ```cpp
-  int getLength() { return length; }
-  ```
+      ```cpp
+      int getLength() { return length; }
+      ```
    - display()
    - reverse()
    - isEmpty()
