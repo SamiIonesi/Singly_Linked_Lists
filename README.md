@@ -80,6 +80,7 @@ class SinglyLinkedList
 ```cpp
 int getLength() { return length; }
 ```
+
 #### - display()
 ```cpp
 void display()
@@ -97,6 +98,19 @@ void display()
     cout << "--------------------------------" << endl;
 }
 ```
+
+#### - recursiveDisplay(Node)
+```cpp
+void recursiveDisplay(Node* temp)
+{
+    if(temp != nullptr)
+    {
+        cout << temp->value << endl;
+        recursiveDisplay(temp->next);
+    }
+}
+```
+
 
 #### - create(array, sizeOfArray)
 ```cpp
