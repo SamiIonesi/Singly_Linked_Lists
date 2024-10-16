@@ -61,17 +61,17 @@ class SinglyLinkedList
 #### - prepand(value)
 #### - insert(value)
 
-2. Deletion methods
-### - delete
+### 2. Deletion methods
+#### - delete
 
-3. Search methods
-### - search(value)
+### 3. Search methods
+#### - search(value)
 
-4. Utility methods
+### 4. Utility methods
 #### getLength()
 ```cpp
 int getLength() { return length; }
 ```
-### - display()
-### - reverse()
-### - isEmpty()
+#### - display()
+#### - reverse()
+#### - isEmpty()
