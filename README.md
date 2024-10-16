@@ -54,7 +54,7 @@ class SinglyLinkedList
 ### Function members of singly linked list (methods)
 
 1. Insertion methods
-   - append(value)
+#### append(value)
   ```cpp
 
   ```
@@ -65,7 +65,7 @@ class SinglyLinkedList
 3. Search methods
    - search(value)
 4. Utility methods
-   - getLength()
+#### getLength()
       ```cpp
       int getLength() { return length; }
       ```
