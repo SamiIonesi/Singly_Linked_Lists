@@ -98,7 +98,7 @@ void display()
 }
 ```
 
-### - create(array, sizeOfArray)
+#### - create(array, sizeOfArray)
 ```cpp
 void create(int* array, int arraySize)
 {
