@@ -4,7 +4,7 @@ This repository describes the methods that are relevant to a singly linked list.
 In a singly linked list each node contains data and a pointer to the next node. <br>
 The traversal is unidirectional, only forward.
 
-### Node class 
+## Node class 
 
 ```cpp
 class Node 
@@ -21,7 +21,7 @@ class Node
 };
 ```
 
-### Singly linked list class
+## Singly linked list class
 
 ```cpp
 class SinglyLinkedList
@@ -51,24 +51,27 @@ class SinglyLinkedList
 };
 ```
 
-### Function members of singly linked list (methods)
+## Function members of singly linked list (methods)
 
-1. Insertion methods
-#### append(value)
-  ```cpp
+### 1. Insertion methods
+#### - append(value)
+```cpp
 
-  ```
-   - prepand(value)
-   - insert(value)
+```
+#### - prepand(value)
+#### - insert(value)
+
 2. Deletion methods
-   - delete
+### - delete
+
 3. Search methods
-   - search(value)
+### - search(value)
+
 4. Utility methods
 #### getLength()
-      ```cpp
-      int getLength() { return length; }
-      ```
-   - display()
-   - reverse()
-   - isEmpty()
+```cpp
+int getLength() { return length; }
+```
+### - display()
+### - reverse()
+### - isEmpty()
