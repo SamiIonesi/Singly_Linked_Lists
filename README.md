@@ -120,6 +120,7 @@ void create(int* array, int arraySize)
 
     head = temp;
     tail = head;
+    length = arraySize;
 
     for(int i = 1; i < arraySize; i++)
     {
