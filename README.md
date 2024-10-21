@@ -1,7 +1,7 @@
 # Singly_Linked_Lists
 This repository describes the methods that are relevant to a singly linked list.
 
-## Notes for a singly linked list
+## Notes on singly linked list
 
 In a singly linked list each node contains data and a pointer to the next node. <br>
 The traversal is unidirectional, only forward.
