@@ -62,6 +62,7 @@ class SinglyLinkedList
 ## Function members of singly linked list (methods)
 
 ### 1. Insertion methods
+
 #### - append(value)
 ```cpp
 
@@ -73,15 +74,28 @@ class SinglyLinkedList
 #### - delete
 
 ### 3. Search methods
+
 #### - search(value)
 
 ### 4. Utility methods
+
 #### - getLength()
+
+This function will return the length of the singly linked list.
+
 ```cpp
 int getLength() { return length; }
 ```
 
 #### - display()
+
+This function will display all the elements present in the singly linked list.
+
+It has a time complexity of:
+- **Ω(n)** for best case
+- **θ(n)** for average case
+- **O(n)** for worst case
+
 ```cpp
 void display()
 {
@@ -100,6 +114,14 @@ void display()
 ```
 
 #### - recursiveDisplay(Node)
+
+This function will display recursively all the elements present in the singly linked list.
+
+It has a time complexity of:
+- **Ω(n)** for best case
+- **θ(n)** for average case
+- **O(n)** for worst case
+
 ```cpp
 void recursiveDisplay(Node* temp)
 {
@@ -113,6 +135,14 @@ void recursiveDisplay(Node* temp)
 
 
 #### - create(array, sizeOfArray)
+
+This function will create a singly linked list having as input an array of elements with a specific size.
+
+It has a time complexity of:
+- **Ω(n)** for best case
+- **θ(n)** for average case
+- **O(n)** for worst case
+
 ```cpp
 void create(int* array, int arraySize)
 {
