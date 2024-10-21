@@ -165,3 +165,28 @@ void create(int* array, int arraySize)
 ```
 #### - reverse()
 #### - isEmpty()
+
+#### - countNodes()
+
+This function will count the nodes present in the singly linked list.
+
+It has a time complexity of:
+- **Ω(n)** for best case
+- **θ(n)** for average case
+- **O(n)** for worst case
+
+```cpp
+int countNodes()
+{
+    Node* temp = head;
+    int count = 0;
+
+    while(temp != nullptr)
+    {
+        count++;
+        temp = temp->next;
+    }
+
+    return count;
+}
+```
