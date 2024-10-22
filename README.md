@@ -171,7 +171,7 @@ void create(int* array, int arraySize)
 This function will count the nodes present in the singly linked list.
 
 It has a time complexity of:
-- **Ω(n)** for best case
+- **Ω(1)** for best case
 - **θ(n)** for average case
 - **O(n)** for worst case
 
@@ -181,12 +181,43 @@ int countNodes()
     Node* temp = head;
     int count = 0;
 
-    while(temp != nullptr)
+    if(length > 0)
     {
-        count++;
-        temp = temp->next;
+        while(temp != nullptr)
+        {
+            count++;
+            temp = temp->next;
+        }
     }
 
     return count;
+}
+```
+
+#### - sumOfNodesValue()
+
+This function will return the sum of all the nodes value present in the singly linked list.
+
+It has a time complexity of:
+- **Ω(1)** for best case
+- **θ(n)** for average case
+- **O(n)** for worst case
+
+```cpp
+int sumOfNodesValue()
+{
+    Node* temp = head;
+    int sum = 0;
+
+    if(length > 0)
+    {
+        while(temp != nullptr)
+        {
+            sum += temp->value;
+            temp = temp->next;
+        }
+    }
+
+    return sum;
 }
 ```
