@@ -221,3 +221,33 @@ int sumOfNodesValue()
     return sum;
 }
 ```
+
+#### - maxElement()
+
+This function will return the maximum element value from a singly linked list.
+
+It has a time complexity of:
+- **Ω(1)** for best case
+- **θ(n)** for average case
+- **O(n)** for worst case
+
+```cpp
+int maxElement()
+{
+    Node* temp = head;
+
+    if(length <= 0)
+        return 0;
+    else
+    {
+        int maxValue = head->value;
+        while(temp != nullptr)
+        {
+            if(temp->value > maxValue)
+                maxValue = temp->value;
+            temp = temp->next;
+        }
+        return maxValue;
+    }
+}
+```
