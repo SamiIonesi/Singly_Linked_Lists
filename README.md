@@ -34,7 +34,13 @@ class SinglyLinkedList
         int length;
 
     public:
-        SinglyLinkedList(){};
+        SinglyLinkedList()
+        {
+            head = nullptr;
+            tail = nullptr;
+            length = 0;
+        };
+
         SinglyLinkedList(int value)
         {
             Node* newNode = new Node(value);
@@ -77,7 +83,39 @@ class SinglyLinkedList
 
 ### 3. Search methods
 
-#### - search(value)
+#### - linearSearch(key)
+
+This function will search linearly for a specific node value in a singly linked list. <br>
+Condition: Elements from the list must be unique. <br>
+This algorithm can be improved by using the next method:
+- **Move to Head**: when the element is found, change the found element with the first node of the list
+In this way, the next time when you search and you do it with the same key, it will do a single comparison, so the time complexity is O(1).
+  
+It has a time complexity of:
+- **Ω(1)** for best case
+- **θ(n)** for average case
+- **O(n)** for worst case
+
+```cpp
+int linearSearch(int key)
+{
+    Node* temp = head;
+    
+    while(temp != nullptr)
+    {
+        if(temp->value == key)
+        {
+            int change = temp->value;
+            temp->value = head->value;
+            head->value = change;
+            return key;
+        }
+        temp = temp->next;
+    }
+
+    return INT_MIN;
+        }
+```
 
 ### 4. Utility methods
 
