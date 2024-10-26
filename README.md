@@ -72,9 +72,34 @@ class SinglyLinkedList
 ### 1. Insertion methods
 
 #### - append(value)
-```cpp
 
+This function will insert a new node at the end of the singly linked list.
+
+It has a time complexity of:
+- **Ω(1)** for best case
+- **θ(1)** for average case
+- **O(1)** for worst case
+
+```cpp
+void append(int value)
+{
+    Node* temp = new Node(value);
+
+    if(head == nullptr)
+    {
+        head = temp;
+        tail = temp;
+    }
+    else
+    {
+        tail->next = temp;
+        tail = temp;
+    }
+
+    length++;
+}
 ```
+
 #### - prepand(value)
 #### - insert(value)
 
