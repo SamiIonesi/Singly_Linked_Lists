@@ -89,6 +89,7 @@ This function will search linearly for a specific node value in a singly linked 
 Condition: Elements from the list must be unique. <br>
 This algorithm can be improved by using the next method:
 - **Move to Head**: when the element is found, change the found element with the first node of the list. <br>
+
 In this way, the next time when you search and you do it with the same key, it will do a single comparison, so the time complexity is O(1).
   
 It has a time complexity of:
