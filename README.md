@@ -101,6 +101,32 @@ void append(int value)
 ```
 
 #### - prepand(value)
+
+This function will insert a new node at the beginning of the singly linked list.
+
+It has a time complexity of:
+- **Ω(1)** for best case
+- **θ(1)** for average case
+- **O(1)** for worst case
+
+```cpp
+void prepand(int value)
+{
+    Node* temp = new Node(value);
+
+    if(head == nullptr)
+    {
+        head = temp;
+        tail = temp;
+    }
+    else
+    {
+        temp->next = head;
+        head = temp;
+    }
+    length++;
+}
+```
 #### - insert(value)
 
 ### 2. Deletion methods
