@@ -127,7 +127,43 @@ void prepand(int value)
     length++;
 }
 ```
-#### - insert(value)
+#### - insert(value, index)
+
+This function will insert a new node at a specific index, with a specific value in the list.
+
+It has a time complexity of:
+- **Ω(1)** for best case
+- **θ(n)** for average case
+- **O(n)** for worst case
+
+```cpp
+void insert(int value, int index)
+{
+    if(index > length)
+        return;
+
+    if(index == 0)
+        prepand(value);
+    else if(index == length) 
+        append(value);
+    else
+    {
+        Node* newNode = new Node(value);
+        Node* temp = head;
+        int i = 1;
+
+        while(i != index)
+        {
+            temp = temp->next;
+            i++;
+        }
+
+        newNode->next = temp->next;
+        temp->next = newNode;
+    }
+    length++;
+}
+```
 
 ### 2. Deletion methods
 #### - delete
