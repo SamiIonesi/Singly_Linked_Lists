@@ -168,6 +168,39 @@ void insert(int value, int index)
 ### 2. Deletion methods
 #### - delete
 
+This function will delete a node from a specific index in the list.
+
+It has a time complexity of:
+- **Ω(1)** for best case
+- **θ(n)** for average case
+- **O(n)** for worst case
+
+```cpp
+void deleteNode(int index)
+{
+    if(index < 0 || index >= length)
+        return;
+    
+    Node* temp = head;
+    Node* nodeToDelete = head;
+
+    for(int i = 0; i < index; i++)
+    {
+        temp = nodeToDelete;
+        nodeToDelete = nodeToDelete->next;
+    }
+
+    if(index == 0)
+        head = temp->next;
+    
+    if(index == length - 1)
+        tail = temp;
+    
+    temp->next = nodeToDelete->next;
+    delete nodeToDelete;
+}
+```
+
 ### 3. Search methods
 
 #### - linearSearch(key)
