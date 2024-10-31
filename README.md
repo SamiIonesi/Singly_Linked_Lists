@@ -166,7 +166,7 @@ void insert(int value, int index)
 ```
 
 ### 2. Deletion methods
-#### - delete
+#### - delete(index)
 
 This function will delete a node from a specific index in the list.
 
