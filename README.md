@@ -228,6 +228,45 @@ void deleteFirst()
 }
 ```
 
+#### - deleteLast()
+
+This function will delete the last node of the list.
+
+It has a time complexity of:
+- **Ω(1)** for best case
+- **θ(n)** for average case
+- **O(n)** for worst case
+
+```cpp
+void deleteLast()
+{
+    if(head == nullptr)
+        return;
+
+    Node* temp = head;
+
+    if(head == tail)
+    {
+        head = nullptr;
+        tail = nullptr;
+        delete head;
+    }
+    else
+    {
+        while(temp->next != tail)
+        {
+            temp = temp->next;
+        }
+
+        tail = temp;
+        temp = temp->next;
+        tail->next = nullptr;
+        delete temp;
+    }
+    length--; 
+}
+```
+
 ### 3. Search methods
 
 #### - linearSearch(key)
