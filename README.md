@@ -201,6 +201,31 @@ void deleteNode(int index)
 }
 ```
 
+#### - deleteFirst()
+
+This function will delete the first node of the list.
+
+It has a time complexity of:
+- **Ω(1)** for best case
+- **θ(1)** for average case
+- **O(1)** for worst case
+
+```cpp
+void deleteFirst()
+{
+    if(head == nullptr)
+        return;
+
+    Node* temp = head;
+
+    if(head == tail)
+        tail = temp->next;
+
+    head = temp->next;
+    delete temp;
+}
+```
+
 ### 3. Search methods
 
 #### - linearSearch(key)
