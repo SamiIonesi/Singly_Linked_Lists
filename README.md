@@ -198,6 +198,7 @@ void deleteNode(int index)
     
     temp->next = nodeToDelete->next;
     delete nodeToDelete;
+    length--;
 }
 ```
 
@@ -223,6 +224,7 @@ void deleteFirst()
 
     head = temp->next;
     delete temp;
+    length--;
 }
 ```
 
