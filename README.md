@@ -389,7 +389,24 @@ void create(int* array, int arraySize)
 }
 ```
 #### - reverse()
+
 #### - isEmpty()
+
+This function will chech if a singly linked list is empty or not.
+
+It has a time complexity of:
+- **Ω(1)** for best case
+- **θ(1)** for average case
+- **O(1)** for worst case
+- 
+```
+bool isEmpty()
+{
+    if(head == nullptr)
+        return true;
+    return false;
+}
+```
 
 #### - countNodes()
 
