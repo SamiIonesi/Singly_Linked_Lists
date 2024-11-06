@@ -475,4 +475,36 @@ int maxElement()
         return maxValue;
     }
 }
+
+```
+
+#### - isSorted()
+
+This function will check if a singly linked list is sorted or not.
+
+It has a time complexity of:
+- **Ω(1)** for best case
+- **θ(n)** for average case
+- **O(n)** for worst case
+
+```cpp
+bool isSorted()
+{
+    if(head == nullptr)
+        return false;
+    
+    if(head == tail)
+        return true;
+    
+    Node* temp = head;
+
+    while(temp->next != nullptr)
+    {
+        if(temp->value > temp->next->value)
+            return false;
+        temp = temp->next;
+    }
+
+    return true;
+}
 ```
